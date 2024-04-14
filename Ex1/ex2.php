@@ -68,5 +68,19 @@
         }
         
         Calculadora($numero1, $numero2, $operacion);
+
+
+    //EX4 No funciona, hay un problema con el for pero no soy capaz de verlo
+    /*
+    $numerolimite= 10; $numerocuenta = 1;
+    Contar($numerolimite, $numerocuenta ){
+        for( $z = 0 ; $z <= $numerolimite ; $z + $numerocuenta){
+            echo $z . '<br/>';
+            }
+    }
+    */
+
+    
+   
 ?>
 </html>
