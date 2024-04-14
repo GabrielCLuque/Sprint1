@@ -104,5 +104,19 @@ function Verificargrau($nota){
    echo '<br/>';
    Verificargrau(7);
    echo '<br/>';
+
+   //EX6 
+   function isBitten(){
+    $ruleta = random_int(0,1);
+    if ($ruleta = 0){
+        $mordido = true;
+    }
+    else{
+        $mordido = false;
+    }
+    return $mordido;
+   } 
+
+   
 ?>
 </html>
