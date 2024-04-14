@@ -69,19 +69,19 @@
         Calculadora(3, 5, '+');
         echo '<br/>';
         Calculadora(2, 3, '-');
+        echo '<br/>';
 
-    //EX4 No funciona, hay un problema con el for pero no soy capaz de verlo
-    /*
-    $numerolimite= 10; $numerocuenta = 1;
-    Contar($numerolimite, $numerocuenta ){
-        for( $z = 0 ; $z <= $numerolimite ; $z + $numerocuenta){
-            echo $z . '<br/>';
-            }
+    //EX4 
+    function Contar($numerolimite, $numerocuenta ){
+    $z = 0;
+            do {
+                echo $z . ' ';
+                $z= $z + $numerocuenta;
+              } while ($z <= $numerolimite );
     }
-    */
-
-    //EX5 
-
-   
+    Contar(10, 1 );
+    echo '<br/>';
+    Contar(30, 3 );
+    
 ?>
 </html>
