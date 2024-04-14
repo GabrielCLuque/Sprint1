@@ -49,15 +49,14 @@
         . 'doble variables ' . '<br/>' . $x *2 . '<br/>' . $y *2 . '<br/>' . $n *2 . '<br/>' . $m *2 . '<br/>'
         . 'producto variables ' . $x + $y + $n + $m . '<br/>' ;
 
-        $numero1= 1; $numero2= 2; $operacion= '+';
         function Calculadora($numero1, $numero2, $operacion){
-            if ($operacion = '+'){
+            if ($operacion == '+'){
                 $resultado = $numero1 + $numero2;
             }
-            else if ($operacion = '-'){
+            else if ($operacion == '-'){
                 $resultado = $numero1 - $numero2;
             }
-            else if ($operacion = '*'){
+            else if ($operacion == '*'){
                 $resultado = $numero1 * $numero2;
             }
             else {
@@ -67,8 +66,9 @@
             echo $numero1 . ' '. $operacion . ' ' . $numero2 . ' = '. $resultado;
         }
         
-        Calculadora($numero1, $numero2, $operacion);
-
+        Calculadora(3, 5, '+');
+        echo '<br/>';
+        Calculadora(2, 3, '-');
 
     //EX4 No funciona, hay un problema con el for pero no soy capaz de verlo
     /*
@@ -80,7 +80,8 @@
     }
     */
 
-    
+    //EX5 
+
    
 ?>
 </html>
