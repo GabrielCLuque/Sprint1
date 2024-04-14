@@ -45,5 +45,10 @@ return $respuesta;
 }
 
 
+
+//ex4 
+
+$yoliteral = ['Nombre' => 'Gabri','Edad' => 24,'Mail' => 'gabrielcasasluque@gmail.com', 'Platofavorito' => 'Carbonara'];
+
 ?>
 </html>
