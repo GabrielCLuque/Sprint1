@@ -82,6 +82,27 @@
     Contar(10, 1 );
     echo '<br/>';
     Contar(30, 3 );
-    
+    echo '<br/>';
+    //EX5 
+function Verificargrau($nota){
+        if ($nota >= '6'){
+            $respuesta= 'Primera Divisió';
+        }
+        else if ($nota >= '4.5' || $nota <= '5.9'){
+            $respuesta= 'Segona Divisió';
+        }
+        else if ($nota >= '3.3' || $nota <= '4.4'){
+            $respuesta= 'Tercera Divisió';
+        }
+        else {
+            $respuesta= 'estudiant reprovarà';
+        }
+        echo $respuesta;
+    }
+
+   Verificargrau(5);
+   echo '<br/>';
+   Verificargrau(7);
+   echo '<br/>';
 ?>
 </html>
