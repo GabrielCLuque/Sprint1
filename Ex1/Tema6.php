@@ -1,7 +1,11 @@
 
 <?php 
-//E1
+//ex2
 $username = $_GET['username'];
-echo'Hola ' . $username;
+
+$usuarios = array('nombre' => $username);
+echo 'Hola ' . $username;
+echo '<br/>';
+echo $usuarios['nombre'];
 ?>
 
