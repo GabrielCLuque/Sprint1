@@ -49,7 +49,7 @@
         . 'doble variables ' . '<br/>' . $x *2 . '<br/>' . $y *2 . '<br/>' . $n *2 . '<br/>' . $m *2 . '<br/>'
         . 'producto variables ' . $x + $y + $n + $m . '<br/>' ;
 
-        function Calculadora($numero1, $numero2, $operacion){
+        function Calcular(int $numero1, int $numero2, string $operacion): void {
             if ($operacion == '+'){
                 $resultado = $numero1 + $numero2;
             }
@@ -66,13 +66,13 @@
             echo $numero1 . ' '. $operacion . ' ' . $numero2 . ' = '. $resultado;
         }
         
-        Calculadora(3, 5, '+');
+        Calcular(3, 5, '+');
         echo '<br/>';
-        Calculadora(2, 3, '-');
+        Calcular(2, 3, '-');
         echo '<br/>';
 
     //EX4 
-    function Contar($numerolimite, $numerocuenta ){
+    function Contar($numerolimite = 10, $numerocuenta ){
     $z = 0;
             do {
                 echo $z . ' ';
@@ -88,10 +88,11 @@ function Verificargrau($nota){
         if ($nota >= '6'){
             $respuesta= 'Primera Divisió';
         }
-        else if ($nota >= '4.5' || $nota <= '5.9'){
+        //siempre confundo && y ||
+        else if ($nota >= '4.5' && $nota <='5.9'){
             $respuesta= 'Segona Divisió';
         }
-        else if ($nota >= '3.3' || $nota <= '4.4'){
+        else if ($nota >= '3.3' && $nota <= '4.4'){
             $respuesta= 'Tercera Divisió';
         }
         else {
@@ -100,10 +101,19 @@ function Verificargrau($nota){
         echo $respuesta;
     }
 
-   Verificargrau(5);
+   Verificargrau(6);
    echo '<br/>';
-   Verificargrau(7);
+   Verificargrau(4.5);
    echo '<br/>';
+   Verificargrau(5.9);
+   echo '<br/>';
+   Verificargrau(3.4);
+   echo '<br/>';
+   Verificargrau(4.2);
+   echo '<br/>';
+   Verificargrau(2.2);
+   echo '<br/>';
+   
 
    //EX6 
    function isBitten(){
@@ -116,68 +126,6 @@ function Verificargrau($nota){
     }
     return $mordido;
    } 
-
-
-//NIVELL 2
-   
-//ex1
-   function Totalapagar($durada){
-    $totalapagar;
-
-    if ($durada <= 3){
-    $totalapagar = 0.10;
-   }
-   else{
-    $totalapagar = ($durada-3) * 0.05 +0.10;
-   }
-   echo 'El cost es de: ' . $totalapagar;
-   }
-
-   Totalapagar(6);
-
-   /*
-
-    magina que som a una botiga on es ven:
-
-Xocolata: 1 euro
-Xiclets: 0,50 euros
-Caramels: 1,50 euros
-Implementa un programa que permeti afegir càlculs a un total de compres d'aquest tipus. Per exemple, que si comprem:
-
-2 xocolates, 1 de xiclets i 1 de caramels, tinguem un programa que permeti anar afegint els subtotals a un total, tal que així:
-
-funció(2 xocolates) + funció(1 de xiclets) + funció(1 de carmels) = 2 + 0.5 + 1.5
-
-Sent, per tant, el total, 4.
-    */
-//ex2
-function Calculpreu($Uxocolata,$Uxiclets,$Ucarmels){
-    $preu = 0.0;
-function Xocolates($Uxocolata,$preu){
-    $preuXocolat = $Uxocolata * 1;
-    $preu = $preuXocolat;
-    return $preu;
-}
-function Xiclets($Uxiclets, $preu) {
-    $preuxiclets = $Uxiclets * 0.50;
-    $preu = $preu + $preuxiclets;
-    return $preu; 
-}
-function Carmels($Ucarmels, $preu) {
-    $preucarmels = $Ucarmels * 1.50;
-    $preu = $preu + $preucarmels;
-    echo $preucarmels . ' = ' . $preu;
-}
-echo Xocolates($Uxocolata,$preu);
-echo ' + ';
-echo Xiclets($Uxiclets, $preu);
-echo ' + ' . $preu. '  ';
-Carmels($Ucarmels,$preu);
-}
-echo '</br>';
-Calculpreu(2,1,1);
-
-
 
 ?>
 </html>
