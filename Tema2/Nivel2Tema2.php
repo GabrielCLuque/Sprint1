@@ -1,3 +1,5 @@
+
+<?php 
 //NIVELL 2 TODAVIA NO HE TERMINADO.
    
 //ex1
@@ -13,7 +15,7 @@
    echo 'El cost es de: ' . $totalapagar;
    }
 
-   Totalapagar(6);
+   Totalapagar(7);
 
    /*
 
@@ -31,29 +33,22 @@ funció(2 xocolates) + funció(1 de xiclets) + funció(1 de carmels) = 2 + 0.5 +
 Sent, per tant, el total, 4.
     */
 //ex2
-function Calculpreu($Uxocolata,$Uxiclets,$Ucarmels){
-    $preu = 0.0;
-function Xocolates($Uxocolata,$preu){
-    $preuXocolat = $Uxocolata * 1;
-    $preu = $preuXocolat;
-    return $preu;
+function Calcularpreu(float $Uxocolata,float $Uxiclets,float $Ucarmels):void{
+function Xocolates($Uxocolata):float {
+    $preuxocolat = $Uxocolata * 1;
+    return $preuxocolat;
 }
-function Xiclets($Uxiclets, $preu) {
+function Xiclets($Uxiclets):float {
     $preuxiclets = $Uxiclets * 0.50;
-    $preu = $preu + $preuxiclets;
-    return $preu; 
+    return $preuxiclets; 
 }
-function Carmels($Ucarmels, $preu) {
+function Carmels($Ucarmels):float {
     $preucarmels = $Ucarmels * 1.50;
-    $preu = $preu + $preucarmels;
-    echo $preucarmels . ' = ' . $preu;
+    return $preucarmels;
 }
-echo Xocolates($Uxocolata,$preu);
-echo ' + ';
-echo Xiclets($Uxiclets, $preu);
-echo ' + ' . $preu. '  ';
-Carmels($Ucarmels,$preu);
+echo Xocolates($Uxocolata) . ' + ' . ($Uxiclets) . ' + ' . Carmels($Ucarmels) . ' = ' . $preuxocolat + $preuxiclets + $preucarmels;
 }
 echo '</br>';
-Calculpreu(2,1,1);
+Calcularpreu(2,1,1);
 
+?>
