@@ -1,0 +1,149 @@
+[class*="col-"] {
+    width: 100%;
+  }
+  
+.blackbox3{
+    background-color: black;
+    padding:30px;
+    padding-left: 20px;
+    margin: 20px;
+}
+.blackbox{
+    background-color: black;
+    padding:20px;
+    margin: 20px;
+    padding-bottom: 5px;
+        }
+        .greybox{
+            background-color: rgb(67, 67, 68);
+            padding: 20px;
+            display:flex;
+            flex-flow: column;
+            }
+            .red1{
+            background-color: red;
+            margin-bottom:10px;
+            padding: 10px;
+            }
+            .red2{
+            background-color: red;
+            margin-bottom:10px;
+            padding: 10px;
+            }
+            .red3{
+            background-color: red;
+            padding: 10px;
+            }
+            .banner{
+                padding: 10px;
+                background-color: yellow;
+                border: 20px solid orange;
+            }
+.redelements{
+}
+.blackbox2{
+    align-content: inline-block;
+    flex: auto;
+    align-content: center;
+    background-color: black;
+    padding:20px;
+    margin: 20px;
+}
+    .greybox2{
+    background-color: rgb(67, 67, 68);
+    padding: 20px;
+    display:flex;
+    flex-direction: column;  
+    }
+        .blue1{
+        background-color: blue;
+        display: flex;
+  
+        margin: 10px;
+        padding: 10px;
+        }
+        .navegacion{
+        background-color:cornflowerblue;
+        display: flex;
+     
+        margin:10px;
+        padding: 10px;
+        }
+
+        .pink{
+            width:92%;
+            display:inline-table;
+            background-color: pink;
+            padding: 20px;
+            margin: 20px 0px 0px 0px;
+        }   
+        .yellow1{
+            display: block;
+            background-color: yellow;
+            padding: 5px 5px 5px 5px;
+            margin: 0px 0px 10px 0px;
+        }  
+        .yellow2{
+            display: block;
+            background-color: yellow;
+            padding: 5px 5px 5px 5px;
+            margin: 0px 0px 0px 0px;
+        }             
+          
+.greybox2elements{
+
+}
+.pie{
+    height: 40px;
+    background-color:darkkhaki;
+    padding: 10px 98% 10px 0px;
+}
+@media (min-width: 768px) {
+.greybox2{
+    display: flex;
+    flex-flow: row wrap;
+}
+    .blue1{flex: 1 1 30%;}
+    .navegacion{flex: 1 1 100%;}
+}
+@media (min-width: 1200px) {
+.greybox{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+    .red1{
+         /* usando flex auto 1 1 no consigo que se respeten la proporciones así que modifico el ancho y los paddings */
+       flex:1 1 auto;
+       height: 20px;
+       margin: 0;
+       
+    }
+    .red2{
+        flex:4 1 auto;
+        height: 20px;
+        margin: 0px 10px 0px 10px;
+    }
+    .red3{
+        flex:1 1 auto;
+        height: 20px;
+        margin: 0;
+      
+    }
+
+.blackbox2{
+    display: flex;
+}
+    .greybox2{
+        flex: 1 1 80%;
+        margin-right: 20px;
+    }
+        .blue1{
+        }
+        .navegacion{
+        }
+    .pink{
+        flex: 1 1 10%;
+        margin: 0;
+            }
+}
