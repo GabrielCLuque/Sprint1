@@ -46,7 +46,7 @@ function Carmels($Ucarmels):float {
     $preucarmels = $Ucarmels * 1.50;
     return $preucarmels;
 }
-echo Xocolates($Uxocolata) . ' + ' . ($Uxiclets) . ' + ' . Carmels($Ucarmels) . ' = ' . $preuxocolat + $preuxiclets + $preucarmels;
+ Xocolates($Uxocolata) ;($Uxiclets); Carmels($Ucarmels); echo $preuxocolat + $preuxiclets + $preucarmels;
 }
 echo '</br>';
 Calcularpreu(2,1,1);
