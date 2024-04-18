@@ -84,15 +84,15 @@
     Contar(30, 3 );
     echo '<br/>';
     //EX5 
-function Verificargrau($nota){
+function Verificargrau($nota):void{
         if ($nota >= '6'){
             $respuesta= 'Primera Divisió';
         }
         //siempre confundo && y ||
-        else if ($nota >= '4.5' && $nota <='5.9'){
+        else if ($nota >= '4.5'){
             $respuesta= 'Segona Divisió';
         }
-        else if ($nota >= '3.3' && $nota <= '4.4'){
+        else if ($nota >= '3.3'){
             $respuesta= 'Tercera Divisió';
         }
         else {

@@ -3,7 +3,7 @@
 //NIVELL 2 TODAVIA NO HE TERMINADO.
    
 //ex1
-   function Totalapagar($durada){
+   function Pagar($durada):void{
     $totalapagar;
 
     if ($durada <= 3){
@@ -12,28 +12,28 @@
    else{
     $totalapagar = ($durada-3) * 0.05 +0.10;
    }
-   echo 'El cost es de: ' . $totalapagar;
+   echo 'El cost es de la trucada es de: ' . $totalapagar . '<br/>';
    }
 
-   Totalapagar(7);
+   Pagar(7) ;
 
 //ex2
 
 
 
-function Xocolates($Uxocolata):float {
+function PagarXocolates($Uxocolata):float {
     $preuxocolat = $Uxocolata * 1;
     return $preuxocolat;
 }
-function Xiclets($Uxiclets):float {
+function PagarXiclets($Uxiclets):float {
     $preuxiclets = $Uxiclets * 0.50;
     return $preuxiclets; 
 }
-function Carmels($Ucarmels):float {
+function PagarCarmels($Ucarmels):float {
     $preucarmels = $Ucarmels * 1.50;
     return $preucarmels;
 }
 
- echo Xocolates(2) . ' + ' . Xiclets(1) . ' + ' . Carmels(1) . ' = ' . Xocolates(2)  +  Xiclets(1) +  Carmels(1) ;
+ echo PagarXocolates(2) . ' + ' . PagarXiclets(1) . ' + ' . PagarCarmels(1) . ' = ' . PagarXocolates(2)  +  PagarXiclets(1) +  PagarCarmels(1) ;
 
 ?>
