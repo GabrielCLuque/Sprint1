@@ -6,7 +6,7 @@ function elevaralcubo($array):void{
     $cubo = $array * $array *$array;
     echo $cubo . '<br/>';
 }
-$arraydeints = array(1,2,3,4,5,6,);
+$arraydeints = array(1,2,3,4,5,6);
 array_map('elevaralcubo', $arraydeints);
 
 //EX2
