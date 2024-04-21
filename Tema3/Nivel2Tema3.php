@@ -6,6 +6,7 @@ $numeros1 = array(3,4,5,7,8);
 $numeros2 = array(1,2,4,5);
 
 function Comparararrays($numeros1, $numeros2) :array{
+    //a veces los arboles no te dejan ver el bosque...
     $coincidencias = array_intersect($numeros1,$numeros2);
     return $coincidencias;
 }
