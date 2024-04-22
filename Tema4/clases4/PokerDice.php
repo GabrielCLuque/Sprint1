@@ -12,10 +12,9 @@ $this->resultados[]=$posiblesresultados[$resultadorandom];
 print_r($posiblesresultados[$resultadorandom]);
 }
 
-function get_Resultados(){
-  for($i = 0; $i <= count($this->resultados)-1; $i++ ){
-    print_r($this->resultados[$i]);
-  }
+function get_Resultados():array{
+ 
+  return $this->resultados;
 }
 
 function shapeName(){
