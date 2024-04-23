@@ -26,4 +26,14 @@ public $alt;
   echo 'L area es de :'. $area . '<br/>';
 }
 }
+class cercle implements Shape{
+    public $radi;
+      public function __construct($radi){
+        $this->radi = $radi;
+      }
+      function Calculararea(){
+      $area = ($this->radi * $this->radi) / 3.14;
+      echo 'L area es de :'. $area . '<br/>';
+    }
+    }
 ?>
