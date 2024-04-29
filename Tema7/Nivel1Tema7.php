@@ -2,7 +2,7 @@
 <?php 
 
 class NumberChecker  {
-	public function __construct(private int $number){}
+	public function __construct(public int $number){}
 
 	public function isEven(): bool {
 		return $this->number%2 == 0;
@@ -11,7 +11,7 @@ class NumberChecker  {
 		return $this->number > 0;
 	}
 }
-function Verificargrau($nota):void{
+function Verificargrau($nota):string{
     if ($nota >= '6'){
         $respuesta= 'Primera Divisió';
     }
@@ -25,7 +25,7 @@ function Verificargrau($nota):void{
     else {
         $respuesta= 'estudiant reprovarà';
     }
-    return $respuesta;
+   return $respuesta;
 }
 ?>
 

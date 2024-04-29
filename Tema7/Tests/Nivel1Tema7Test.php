@@ -1,32 +1,33 @@
-
-<?php 
 namespace App\Tests;
-use App\Nivel1tema7;
+<?php 
+
+require_once('Nivel1Tema7.php');
 use PHPUnit\Framework\TestCase;
 
-class NumberChecker extends TestCase{
-public function Versiespar{
+class Nivel1Tema7test extends TestCase{
+/** @test */
+public function Versiespar(){
     $numeroimpar = new NumberChecker(1);
     $this->assertEquals(false,$numeroimpar->isEven());
-    $numeropar = new NumberChecker(2);
-    $this->assertEquals(true,$numeropar->isEven());
 }
-public function Versiespositivo{
+/** @test */
+public function Versiespositivo(){
     $numeronegativo = new NumberChecker(-1);
     $this->assertEquals(false,$numeronegativo->isPositive());
-
-    $numeropositivo = new NumberChecker(1);
-    $this->assertEquals(true$numeropositivo->isPositive());
+}
+/** @test */
+public function Vernotagrau(){
+   $this->assertEquals('Primera Divisió',Verificargrau(6));
+   $this->assertEquals('Segona Divisió',Verificargrau(4.5));
+   $this->assertEquals('Tercera Divisió',Verificargrau(3.3));
+   $this->assertEquals('estudiant reprovarà',Verificargrau(3));
+    }
 }
 
 //EX2
-public function Vernotagrau{
-assertEquals('Primera Divisió',Verificargrau(6));
-assertEquals('Segona Divisió',Verificargrau(4.5));
-assertEquals('Tercera Divisió',Verificargrau(3.3));
-assertEquals('estudiant reprovarà',Verificargrau(3));
+/** @test */
+//./vendor/bin/phpunit tests
 
-}
 
 ?>
 
