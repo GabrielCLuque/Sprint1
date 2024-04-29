@@ -9,28 +9,29 @@ $luis = new PokerDice();
 $javier = new PokerDice();
 $jesus = new PokerDice();
 
+$listadados =  array();
+
+array_push($listadados,$dadox ,$jose,$luis,$javier,$jesus);
+
+function tirar5dados(array $dados){
+for($i=0; $i<count($dados); $i++){
+    echo '<br/>'. 'el dado '. $i+1 . ' saca ' ;
+    $dados[$i]->throw() . '<br/>';
+}
+return $dados;
+}
 
 
-
-$dadox ->throw();
-$dadox ->get_Resultados();
-$dadox ->shapeName();
-
-function tirar5dados($dado1, $dado2, $dado3 ,$dado4 ,$dado5){
-    echo  '<br/>';
-    echo 'El primer dado tiene resultado: ';echo  $dado1->throw() . '<br/>';
-    echo 'El segundo dado tiene resultado: ';echo $dado2->throw().'<br/>';
-    echo 'El tercer dado tiene resultado: ';echo  $dado3->throw() . '<br/>';
-    echo 'El cuarto dado tiene resultado: ';echo  $dado4->throw() . '<br/>';
-    echo 'El quinto dado tiene resultado: ';echo $dado5->throw() . '<br/>';
-    echo  '<br/>';
+function contartiradas(array $dados){
+    for($i=0; $i<count($dados); $i++){
+        echo 'el dado '. $i . ' ha sacado ';
+        $dados[$i]->get_Resultados() ;
+        echo '<br/>';
+    }
 
 }
-tirar5dados($dadox,$jose,$luis ,$javier ,$jesus );
 
-function contartiradas($dado1, $dado2, $dado3 ,$dado4 ,$dado5){
-echo count($dado1->get_Resultados()) + count($dado2->get_Resultados())+ count($dado3->get_Resultados()) 
-+ count($dado4->get_Resultados()) + count($dado5->get_Resultados());
-}
-contartiradas($dadox,$jose,$luis ,$javier ,$jesus);
+tirar5dados($listadados);
+contartiradas($listadados);
+
 ?>
