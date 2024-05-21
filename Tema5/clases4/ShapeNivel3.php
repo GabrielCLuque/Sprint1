@@ -24,7 +24,7 @@ class triangle extends Shape implements calculos{
   echo 'L area es de :'. $area . '<br/>';
 }
 
-class cercle extends Shape implements calculos{
+class cercle implements calculos{
   public $radi;
     public function __construct($radi){
       $this->radi = $radi;

@@ -20,18 +20,17 @@ for($i=0; $i<count($dados); $i++){
 }
 return $dados;
 }
-
-
-function contartiradas(array $dados){
+function getTotalThrows (array $dados){
+    $totaltiradas=0;
     for($i=0; $i<count($dados); $i++){
-        echo 'el dado '. $i . ' ha sacado ';
-        $dados[$i]->get_Resultados() ;
-        echo '<br/>';
+        $totaltiradas += $dados[$i]->contartiradas(); 
     }
-
+echo $totaltiradas;
+return $dados;
 }
 
-tirar5dados($listadados);
-contartiradas($listadados);
 
+tirar5dados($listadados);
+echo $dadox->shapeName(). '<br/>';
+getTotalThrows ($listadados)
 ?>

@@ -1,24 +1,30 @@
 <?php
+define ('posiblesresultados',['As', 'K', 'Q', 'J', '7 ', '8']);
 class PokerDice {
 
 
 private $resultados = array();
 
+
+
 function throw(){
 $resultadorandom = rand(0,5);
-$posiblesresultados =  array('As', 'K', 'Q', 'J', '7 ', '8');
 
-$this->resultados[]=$posiblesresultados[$resultadorandom];
-print_r($posiblesresultados[$resultadorandom]);
+$this->resultados[]=posiblesresultados[$resultadorandom];
+
+print_r(posiblesresultados[$resultadorandom]);
 }
 
-function get_Resultados():array{
+function get_Resultados(){
  
   return $this->resultados;
 }
+function contartiradas(){
+  return count($this->get_Resultados());
+}
 
 function shapeName(){
-  print_r(end($this->resultados));
+ return end($this->resultados);
 }
 }
 
